@@ -1,17 +1,73 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+import React from "react";
+import ReactDom from "react-dom";
+import profile1 from './images/photo1.jpeg';
+import profile2 from './images/photo2.jpeg';
+import profile3 from './images/photo3.jpeg';
 
-ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
+
+const App = () => {
+
+    return (
+        <div className="ui comments">
+            <div className="comment">
+                <a href="/" className="avatar">
+                    <img src={profile1} alt="proile picture" />
+                </a>
+                <div className="content">
+                    <a href="/ " className="author">
+                        Sarah
+                    </a>
+
+                    <div className="metadata">
+                        <span className="Date">Today at 5:00 PM</span>
+                    </div>
+                    <div className="text">
+                        It's amazing
+                    </div>
+                </div>
+            </div>
+            <div className="comment">
+                <a href="/" className="avatar">
+                    <img src={profile2} alt="proile picture" />
+                </a>
+                <div className="content">
+                    <a href="/ " className="author">
+                        John
+                    </a>
+
+                    <div className="metadata">
+                        <span className="Date">Today at 5:00 PM</span>
+                    </div>
+                    <div className="text">
+                     da ramana..
+                    </div>
+                </div>
+            </div>
+            <div className="comment">
+                <a href="/" className="avatar">
+                    <img src={profile3} alt="proile picture" />
+                </a>
+                <div className="content">
+                    <a href="/ " className="author">
+                        Ramanan
+                    </a>
+
+                    <div className="metadata">
+                        <span className="Date">Today at 8:00 PM</span>
+                    </div>
+                    <div className="text">
+                       ya boii
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    )
+}
+
+ReactDom.render(
+    < App />,
+    document.querySelector('#root')
+
+)
